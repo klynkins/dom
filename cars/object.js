@@ -3,9 +3,11 @@ var car = {
   carTypes: ['Economy', 'Midsize'],
   economyAvailable: 175,
   midsizeAvailable: 85,
-  economyRented: 0,
-  midsizeRented: 0,
 }  
+
+window.onload = function() {
+    document.getElementById("businessName").innerHTML = car.name;
+    };
 
 function update() {
   document.getElementById("demo1").innerHTML=car.name;
@@ -13,9 +15,9 @@ function update() {
   document.getElementById("demo3").innerHTML=car.economyAvailable;
   document.getElementById("demo4").innerHTML=car.midsizeAvailable;
   }
-function getMid() {
+function getEco() {
    document.getElementById("demo3").innerHTML=car.economyAvailable--; 
 }
-function getEco() {
+function getMid() {
     document.getElementById("demo4").innerHTML= car.midsizeAvailable--;
 }
